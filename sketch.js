@@ -11,15 +11,17 @@ var button0;
 var button1;
 var button8;
 
-let cW = 2100/4;
-let cH = 2970/4;
+let cW = 2100;
+let cH = 2970;
 
 let setNum = 3;
 
 function setup() {
   //frameRate(1);
-  c = createCanvas(cW, cH);
-  c.position((windowWidth/2)-cW/2, 200);
+  var cWnew = windowHeight/2.5;
+  var cHnew = cWnew*(cH/cW);
+  c = createCanvas(cWnew, cHnew);
+  c.position((windowWidth/2)-cWnew/2, windowHeight/5);
   img1 = loadImage('assets/set'+setNum+'/1.jpg');
   img2 = loadImage('assets/set'+setNum+'/2.jpg');
   img3 = loadImage('assets/set'+setNum+'/3.jpg');
@@ -31,48 +33,58 @@ function setup() {
 
     // UI
   button0 = createButton('Random');
-  button0.position((windowWidth/2)-50, 100);
-  button0.size(100);
+  button0.position((windowWidth/2)-(windowHeight/20), windowHeight/15);
+  button0.size(windowHeight/10);
   button0.mousePressed(setCompRandom);
-
+  button0.style('font-size', '1.25vh');
+  
   button1 = createButton('1');
-  button1.position(50, 200);
-  button1.size(50);
+  button1.position((windowHeight/30), (windowHeight/5)*4);
+  button1.size(windowHeight/15);
   button1.mousePressed(setCompSection1);
+  button1.style('font-size', '1.25vh');
 
   //slider = createSlider(3,12,6);
  // slider.size(100);
  // slider.position(70, 200);
 
   button1 = createButton('2');
-  button1.position(50, 325);
-  button1.size(50);
+  button1.position((windowHeight/30), (windowHeight/5)*4.15);
+  button1.size(windowHeight/15);
   button1.mousePressed(setCompSection2);
-  
+  button1.style('font-size', '1.25vh');
+
   button1 = createButton('3');
-  button1.position(50, 450);
-  button1.size(50);
+  button1.position((windowHeight/30)*1, (windowHeight/5)*4.3);
+  button1.size(windowHeight/15);
   button1.mousePressed(setCompSection3);
+  button1.style('font-size', '1.25vh');
 
   button1 = createButton('4');
-  button1.position(50, 575);
-  button1.size(50);
+  button1.position((windowHeight/30)*1, (windowHeight/5)*4.45);
+  button1.size(windowHeight/15);
   button1.mousePressed(setCompSection4);
+  button1.style('font-size', '1.25vh');
 
   button1 = createButton('5');
-  button1.position(50, 700);
-  button1.size(50);
+  button1.position((windowHeight/30)*1, (windowHeight/5)*4.6);
+  button1.size(windowHeight/15);
   button1.mousePressed(setCompSection5);
+  button1.style('font-size', '1.25vh');
 
   button1 = createButton('6');
-  button1.position(50, 825);
-  button1.size(50);
+  button1.position((windowHeight/30)*1, (windowHeight/5)*4.75);
+  button1.size(windowHeight/15);
   button1.mousePressed(setCompSection6);
+  button1.style('font-size', '1.25vh');
 
   button8 = createButton('Save');
-  button8.position((windowWidth/2)-25, 1000);
-  button8.size(50);
+  button8.position((windowWidth/2)-(windowHeight/30), windowHeight/1.15);
+  button8.size(windowHeight/15);
   button8.mousePressed(saveComp);
+  button8.style('font-size', '1.25vh');
+
+  
 }
 function draw() {
   //setCompSection1();
