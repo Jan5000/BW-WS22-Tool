@@ -14,7 +14,7 @@ var button8;
 let cW = 2100;
 let cH = 2970;
 
-let setNum = 3;
+let setNum = 4;
 
 function setup() {
   //frameRate(1);
@@ -37,6 +37,12 @@ function setup() {
   button0.size(windowHeight/10);
   button0.mousePressed(setCompRandom);
   button0.style('font-size', '1.25vh');
+
+ /*  button0 = createButton('Set');
+  button0.position((windowWidth/2)-(windowHeight/20), windowHeight/15);
+  button0.size(windowHeight/10);
+  button0.mousePressed(setSet);
+  button0.style('font-size', '1.25vh'); */
   
   button1 = createButton('1');
   button1.position((windowHeight/30), (windowHeight/5)*4);
