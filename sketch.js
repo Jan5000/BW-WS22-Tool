@@ -39,6 +39,7 @@ function preload() {
 
 function setup() {
   //frameRate(1);
+  
   cWnew = windowHeight/2.5;
   cHnew = cWnew*(cH/cW);
   c = createCanvas(cWnew, cHnew);
@@ -169,7 +170,24 @@ function setup() {
 function draw() {
   //setCompSection1();
   //setCompSection2();
+  //wait(100);
+  //setCompRandomNew();
 }
+function wait(time)
+{
+  start = millis()
+  do
+  {
+    current = millis();
+  }
+  while(current < start + time)
+}
+
+/* function mousePressed() {
+  saveFrames('out', 'png', 1, 25, data => {
+    save(data, "jsjs.mp4");
+  });
+  } */
 
 function setCompSection1() {
   //console.log(random(imgArray));
@@ -218,9 +236,7 @@ function setCompRandomNew() {
   image(newArr[0], ranX, ranY, newArr[0].width/ranScale, newArr[0].height/ranScale);
   
   image(imgOverlay,0,0,width,height);
-
 }
-
 
 function saveComp() {
   saveCanvas(c, 'myCanvas', 'jpg');
